@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Awareness</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #e0f7fa;
+        }
+        h1, h2 {
+            color: #00796b;
+        }
+        .info {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+        a {
+            color: #e91e63;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .toggle-btn {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .toggle-btn:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Environmental Awareness</h1>
+
+    <button class="toggle-btn" onclick="toggleSection('recycling')"> Recycling Info</button>
+    <div class="info" id="recycling">
+        <h2>The Importance of Recycling</h2>
+        <p>Recycling is crucial for conserving natural resources and reducing waste. By recycling, we can minimize pollution and save energy.</p>
+        <img src="https://th.bing.com/th/id/OIP.yJbe3k5DDBYk2iCJ5DuA5QHaLH?rs=1&pid=ImgDetMain" alt="Recycling Symbol">
+        <p>Here are some simple ways to start recycling:</p>
+        <ul>
+            <li><strong>Separate your waste:</strong> Keep recyclables apart from trash.</li>
+            <li><strong>Use designated bins:</strong> Utilize recycling bins at home and work.</li>
+            <li><strong>Educate others:</strong> Share information about recycling with friends and family.</li>
+        </ul>
+        <p>For more information, check out the <a href="https://www.epa.gov/recycle" target="_blank" onclick="alert('You are leaving this page!')">EPA Recycling Page</a>.</p>
+    </div>
+
+    <button class="toggle-btn" onclick="toggleSection('climate')"> Climate Change Info</button>
+    <div class="info" id="climate">
+        <h2>Climate Change: What You Can Do</h2>
+        <p>Climate change is a pressing global issue. Here are some actions you can take to help mitigate its effects:</p>
+        <ul>
+            <li>Reduce energy consumption by turning off lights and unplugging devices.</li>
+            <li>Use public transportation or carpool whenever possible.</li>
+            <li>Support local and sustainable products.</li>
+        </ul>
+        <p>Learn more about climate action at <a href="#climate-tips">this page</a>.</p>
+    </div>
+
+    <button class="toggle-btn" onclick="toggleSection('sustainable')"> Sustainable Lifestyle Tips</button>
+    <div class="info" id="sustainable">
+        <h2>Tips for a Sustainable Lifestyle</h2>
+        <p>Adopting a sustainable lifestyle can make a difference:</p>
+        <ol>
+            <li>Choose reusable bags instead of plastic ones.</li>
+            <li>Conserve water by fixing leaks and taking shorter showers.</li>
+            <li>Participate in local clean-up efforts.</li>
+        </ol>
+        <p>Visit <a href="https://www.worldwildlife.org" target="_blank" onclick="alert('You are leaving this page!')">WWF</a> for more resources and information.</p>
+    </div>
+
+    <script>
+        function toggleSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section.style.display === "none" || section.style.display === "") {
+                section.style.display = "block";
+            } else {
+                section.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
